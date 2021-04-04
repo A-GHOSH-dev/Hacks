@@ -64,16 +64,3 @@ Bootstrap
 
 
 
-![2021-03-14 (1)-min](https://user-images.githubusercontent.com/75447439/113495357-d88afc00-950e-11eb-97f7-02ac16c2e76e.jpg)
-![2021-03-14 (4)-min](https://user-images.githubusercontent.com/75447439/113495359-daed5600-950e-11eb-9e53-1907ec0c49c8.jpg)
-![2021-03-14 (5)-min](https://user-images.githubusercontent.com/75447439/113495360-db85ec80-950e-11eb-92a9-1ed93e0fb4b3.jpg)
-![2021-03-14 (7)-min](https://user-images.githubusercontent.com/75447439/113495361-dcb71980-950e-11eb-9840-ffc65704955d.jpg)
-![2021-03-14 (13)-min](https://user-images.githubusercontent.com/75447439/113495362-dd4fb000-950e-11eb-8f84-4f592df4e165.jpg)
-<img width="951" alt="2021-03-27 (3)" src="https://user-images.githubusercontent.com/75447439/113495363-de80dd00-950e-11eb-91b5-bf1f3bad37d5.png">
-<img width="951" alt="2021-03-27" src="https://user-images.githubusercontent.com/75447439/113495365-e04aa080-950e-11eb-908d-b4529c921c3d.png">
-<img width="951" alt="2021-03-28 (2)" src="https://user-images.githubusercontent.com/75447439/113495367-e2146400-950e-11eb-9099-4f137d3501fa.png">
-<img width="951" alt="2021-03-28 (3)" src="https://user-images.githubusercontent.com/75447439/113495368-e3459100-950e-11eb-9472-1459fc1b10a3.png">
-<img width="951" alt="2021-03-28 (4)" src="https://user-images.githubusercontent.com/75447439/113495370-e50f5480-950e-11eb-962a-de65462ad64e.png">
-<img width="951" alt="2021-03-28 (5)" src="https://user-images.githubusercontent.com/75447439/113495372-e5a7eb00-950e-11eb-8cf4-40c454aec107.png">
-<img width="951" alt="2021-03-28 (6)" src="https://user-images.githubusercontent.com/75447439/113495376-e6d91800-950e-11eb-908b-d3e637bf6942.png">
-<img width="951" alt="2021-03-28" src="https://user-images.githubusercontent.com/75447439/113495377-e80a4500-950e-11eb-9b5c-06a9af679f85.png">
