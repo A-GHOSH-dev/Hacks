@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    
+    
+    
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+        }
+    
+        nav {
+          display: flex;
+          height: 80px;
+          width: 100%;
+          background: #0c0c0c;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 50px 0 100px;
+    
+          flex-wrap: wrap;
+        }
+    
+        nav .logo {
+          color: #fff;
+          font-size: 25px;
+          font-weight: 600;
+          margin-left: -80px;
+        }
+    
+        nav ul {
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+        }
+    
+        nav ul li {
+          margin: 0 5px;
+        }
+    
+        nav ul li a {
+          color: #f2f2f2;
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: 500;
+          padding: 8px 15px;
+          border-radius: 5px;
+          letter-spacing: 1px;
+          transition: all 0.3s ease;
+        }
+    
+        nav ul li a.active,
+        nav ul li a:hover {
+          color: #111;
+          background: #fff;
+        }
+    
+        nav .menu-btn i {
+          color: #fff;
+          font-size: 22px;
+          cursor: pointer;
+          display: none;
+        }
+    
+        input[type="checkbox"] {
+          display: none;
+        }
+    
+        @media (max-width: 1000px) {
+          nav {
+            padding: 0 40px 0 50px;
+          }
+        }
+    
+        @media (max-width: 920px) {
+          nav .menu-btn i {
+            display: block;
+          }
+    
+          #click:checked~.menu-btn i:before {
+            content: "\f00d";
+          }
+    
+          nav ul {
+            position: fixed;
+            top: 80px;
+            left: -100%;
+            background: #111;
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            display: block;
+            transition: all 0.3s ease;
+          }
+    
+          #click:checked~ul {
+            left: 0;
+          }
+    
+          nav ul li {
+            width: 100%;
+            margin: 40px 0;
+          }
+    
+          nav ul li a {
+            width: 100%;
+            margin-left: -100%;
+            display: block;
+            font-size: 20px;
+            transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          }
+    
+          #click:checked~ul li a {
+            margin-left: 0px;
+          }
+    
+          nav ul li a.active,
+          nav ul li a:hover {
+            background: none;
+            color: cyan;
+          }
+        }
+
+        /* STYLES SPECIFIC TO FOOTER  */
+.footer {
+            width: 100%;
+            position: relative;
+            height: auto;
+            background-color: #070617;
+            margin-top: -20px;
+        }
+
+        .footer .col {
+            width: 190px;
+            height: auto;
+            float: left;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            padding: 0px 20px 20px 20px;
+        }
+
+        .footer .col h1 {
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            font-size: 12px;
+            line-height: 17px;
+            padding: 20px 0px 5px 0px;
+            color: rgba(255, 255, 255, 0.2);
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.250em;
+        }
+
+        .footer .col ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer .col ul li {
+            color: #999999;
+            font-size: 14px;
+            font-family: inherit;
+            font-weight: bold;
+            padding: 5px 0px 5px 0px;
+            cursor: pointer;
+            transition: .2s;
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
+        }
+
+        .social ul li {
+            display: inline-block;
+            padding-right: 5px !important;
+        }
+
+        .footer .col ul li:hover {
+            color: #ffffff;
+            transition: .1s;
+            -webkit-transition: .1s;
+            -moz-transition: .1s;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        @media only screen and (min-width: 1280px) {
+            .contain {
+                width: 1200px;
+                margin: 0 auto;
+            }
+        }
+
+        @media only screen and (max-width: 1139px) {
+            .contain .social {
+                width: 1000px;
+                display: block;
+            }
+
+            .social h1 {
+                margin: 0px;
+            }
+        }
+
+        @media only screen and (max-width: 950px) {
+            .footer .col {
+                width: 33%;
+            }
+
+            .footer .col h1 {
+                font-size: 14px;
+            }
+
+            .footer .col ul li {
+                font-size: 13px;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .footer .col {
+                width: 50%;
+            }
+
+            .footer .col h1 {
+                font-size: 14px;
+            }
+
+            .footer .col ul li {
+                font-size: 13px;
+            }
+        }
+
+        @media only screen and (max-width: 340px) {
+            .footer .col {
+                width: 100%;
+            }
+        }
+
+
+
+        .full{
+            width: 100%;
+            height: 1600px;
+        }
+        .earth{
+            position: absolute;
+            top: 200px;
+            left: 100px;
+        }
+        .box1{
+            background-color: black;
+            font-size: 20px;
+            font-weight: bold;
+            color: cornsilk;
+            border: solid;
+            border-color: black;
+            position: absolute;
+            top: 200px;
+            left: 500px;
+            width: 700px;
+            
+        }
+        p{
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            text-align: justify;
+        }
+        h2{
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-right: 30px;
+            
+        }
+        .AR1{
+            background-color: darkgray;
+            margin-top: -50px;
+            margin-left: 160px;
+            position: absolute;
+            font-size: 30px;
+        }
+        #bb{
+            text-decoration: none;
+            color: black;
+        }
+
+
+        .saturn{
+            position: absolute;
+            top: 670px;
+            left: 100px;
+            width: 372px;
+            height: 350px;
+        }
+        .box2{
+            background-color: black;
+            font-size: 20px;
+            font-weight: bold;
+            color: cornsilk;
+            border: solid;
+            border-color: black;
+            position: absolute;
+            top: 670px;
+            left: 500px;
+            width: 700px;
+            
+        }
+        .satelite{
+            position: absolute;
+            top: 1130px;
+            left: 100px;
+            width: 372px;
+            height: 350px;
+        }
+        .box3{
+            background-color: black;
+            font-size: 20px;
+            font-weight: bold;
+            color: cornsilk;
+            border: solid;
+            border-color: black;
+            position: absolute;
+            top: 1130px;
+            left: 500px;
+            width: 700px;
+            
+        }
+        p{
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            text-align: justify;
+        }
+        h2{
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-right: 30px;
+            
+        }
+        .AR1{
+            background-color: darkgray;
+            margin-top: -50px;
+            margin-left: 160px;
+            position: absolute;
+            font-size: 30px;
+        }
+        #bb{
+            text-decoration: none;
+            color: black;
+        }
+
+
+    
+</style>    
+</head>
+<body>
+    <section>
+        <nav>
+          <div class="logo">EduVision</div>
+          <input type="checkbox" id="click">
+          <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Students Corner.html">Students' Corner</a></li>
+            <li><a href="Teachers Corner.html">Teachers' Corner</a>
+            </li>
+            
+            <li><a href="NGO&Corporate.html">NGO/Consultant Corner</a></li>
+            <li><a href="Edu News.html">Edu-News</a>
+            </li>
+            <li><a href="counsellor.html">Counsellors</a></li>
+            <li><a
+              href="sponsor.html">Sponsor Child</a>
+          </li>
+          </ul>
+        </nav>
+    
+    
+        </div>
+    
+      </section>
+      <div>
+          <img src="images/edu52.png" class="full">
+          <img src="https://media.giphy.com/media/X6hiFJjvTDAAw/giphy.gif" class="earth">
+          <div class="box1">
+              <h2>Earth</h2>
+              <button class="AR1"><a id="bb" href="#">AR View</a></button>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga blanditiis soluta sit? Laborum sed tenetur nemo quos iste debitis omnis repellat odit quidem? Earum provident blanditiis tempora vel repudiandae!LoremLorem ipsum dolor sit amet consectetur adipisicing l repudiandae!LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga blanditiis soluta sit? Laborum   </p>
+          </div>
+          <img src="https://media.giphy.com/media/3o7buctjKD8g5r4544/giphy.gif" class="saturn">
+          <div class="box2">
+              <h2>Saturn</h2>
+              <button class="AR1"><a id="bb" href="#">AR View</a></button>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga blanditiis soluta sit? Laborum sed tenetur nemo quos iste debitis omnis repellat odit quidem? Earum provident blanditiis tempora vel repudiandae!LoremLorem ipsum dolor sit amet consectetur adipisicing l repudiandae!LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga blanditiis soluta sit? Laborum   </p>
+          </div>
+          <img src="https://media.giphy.com/media/8Am0UlfiwZcgEDOy4h/giphy.gif" class="satelite">
+          <div class="box3">
+              <h2>Satellite</h2>
+              <button class="AR1"><a id="bb" href="#">AR View</a></button>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga blanditiis soluta sit? Laborum sed tenetur nemo quos iste debitis omnis repellat odit quidem? Earum provident blanditiis tempora vel repudiandae!LoremLorem ipsum dolor sit amet consectetur adipisicing l repudiandae!LoremLorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga blanditiis soluta sit? Laborum   </p>
+          </div>
+      </div>
+
+      <!-- FOOTER START -->
+ <div class="footer">
+    <div class="contain">
+        <div class="col">
+            <h1>Company</h1>
+            <ul>
+                <li>About</li>
+                <li>Mission</li>
+                <li>Services</li>
+                <li>Social</li>
+                <li>Get in touch</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Products</h1>
+            <ul>
+                <li>About</li>
+                <li>Mission</li>
+                <li>Services</li>
+                <li>Social</li>
+                <li>Get in touch</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Accounts</h1>
+            <ul>
+                <li>About</li>
+                <li>Mission</li>
+                <li>Services</li>
+                <li>Social</li>
+                <li>Get in touch</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Resources</h1>
+            <ul>
+                <li>Webmail</li>
+                <li>Redeem code</li>
+                <li>WHOIS lookup</li>
+                <li>Site map</li>
+                <li>Web templates</li>
+                <li>Email templates</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h1>Support</h1>
+            <ul>
+                <li>Contact us</li>
+                <li>Web chat</li>
+                <li>Open ticket</li>
+            </ul>
+        </div>
+        <div class="col social">
+            <h1>Social</h1>
+            <ul>
+                <li><img src="https://svgshare.com/i/5fq.svg" width="32" style="width: 32px;"></li>
+                <li><img src="https://svgshare.com/i/5eA.svg" width="32" style="width: 32px;"></li>
+                <li><img src="https://svgshare.com/i/5f_.svg" width="32" style="width: 32px;"></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- END OF FOOTER -->
+  
+    
+</body>
+</html>
